@@ -455,25 +455,25 @@ void pong_main(void){
                 }
             }
 
-            //right - sloppily done with joystick x axis until we have second joystick
-            if((bit_joy_x > JOY_HIGH_THRESHOLD) && (right.y != (LCD_MAX_X - right.height))){  //up (right) && not top
-                //move up
-                LCD_erase_rectangle(right);
-                right.y++;
-                LCD_draw_rectangle(right);
-                if(at_right){        //if ball is at paddle and paddle is moving, change velocity of ball
-                    yvelocity++;
-                }
-            }
-            if((bit_joy_x < JOY_LOW_THRESHOLD) && (right.y >= (field_bottom + 1))){  //down (left) && not bottom
-                //move down
-                LCD_erase_rectangle(right);
-                right.y--;
-                LCD_draw_rectangle(right);
-                if(at_left){        //if ball is at paddle and paddle is moving, change velocity of ball
-                    yvelocity--;
-                }
-            }
+            // //right - sloppily done with joystick x axis until we have second joystick
+            // if((bit_joy_x > JOY_HIGH_THRESHOLD) && (right.y != (LCD_MAX_X - right.height))){  //up (right) && not top
+            //     //move up
+            //     LCD_erase_rectangle(right);
+            //     right.y++;
+            //     LCD_draw_rectangle(right);
+            //     if(at_right){        //if ball is at paddle and paddle is moving, change velocity of ball
+            //         yvelocity++;
+            //     }
+            // }
+            // if((bit_joy_x < JOY_LOW_THRESHOLD) && (right.y >= (field_bottom + 1))){  //down (left) && not bottom
+            //     //move down
+            //     LCD_erase_rectangle(right);
+            //     right.y--;
+            //     LCD_draw_rectangle(right);
+            //     if(at_left){        //if ball is at paddle and paddle is moving, change velocity of ball
+            //         yvelocity--;
+            //     }
+            // }
 
             at_right = 0;
             at_left = 0;
