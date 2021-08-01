@@ -474,7 +474,25 @@ void pong_main(void){
             //         yvelocity--;
             //     }
             // }
-
+            // Adding AI player 
+            if((ball.y < right.y) && (right.y != 0))
+            {
+                LCD_erase_rectangle(right);
+                right.y--;
+                LCD_draw_rectangle(right);
+                if(at_right){        //if ball is at paddle and paddle is moving, change velocity of ball
+                     yvelocity++;
+                }
+            }
+            if((ball.y > right.y+right.height) && (right.y != (LCD_MAX_X - right.height)))
+            {
+                LCD_erase_rectangle(right);
+                right.y++;
+                LCD_draw_rectangle(right);
+                if(at_right){        //if ball is at paddle and paddle is moving, change velocity of ball
+                    yvelocity--;
+                }
+            }
             at_right = 0;
             at_left = 0;
             //draw a line to separate the field and scoreboard
