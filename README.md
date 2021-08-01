@@ -1,11 +1,13 @@
-# MSP432_Game_System
-Code to turn the Texas Instruments MSP432 and Education Booster pack into a mini game system
+# Handheld video game system
 
-This code was written in the Texas Instruments IDE "Code Composer" and compiled inside of it with gcc.
-I have not tried to compile or push this code onto the MSP432 in any other way than with gcc and Code Composer.
+#### Things required :
+* 1 TI MSP-EXP432P401R Microcontroller
+* 1 Educational BoosterPack MKII
+* 1 USB 2.0 A to Micro B Cable
+* Code Composer Studio running on either Windows or Mac
 
-# Project Operation
-When the program is running the LCD will first display "press button." 
-Once a button is pressed the user will be directed to choose what game they want to play.
-Once the user has selected what game they want to play they will enter that game.
-Once the game has finished the user will be directed back to the original "press button" screen.
+#### References :
+1. Forked from [Git Repo](https://github.com/obergog/MSP432_Game_System)
+2. Pong replica in C++ from this [Youtube Tutorial](https://youtube.com/playlist?list=PL7Ej6SUky135IAAR3PFCFyiVwanauRqj3)
+3. MSP432 Technical Reference Manual
+4. BoosterPack user guide
