@@ -251,8 +251,10 @@ void initialize_pong(void){
 }
 
 /*code to choose the maximum score*/
+/*code to choose the maximum score*/
 void pong_max_score(void){
     max_score = 5;
+    uint8_t rem, qut = max_score;
     LCD_write_string(" MAX SCORE? ",start_screen.x,start_screen.y + 10,BLACK,12);
     LCD_write_character(char_lib_num[max_score],60,start_screen.y,BLACK);
 
@@ -261,18 +263,30 @@ void pong_max_score(void){
         if ((timer_trigger == 1) && !timer_delay){
             if(bit_joy_y > JOY_HIGH_THRESHOLD){
                 max_score++;
-                max_score = max_score % 10;                 //max score cannot be any larger than 10
-                LCD_write_character(char_lib_num[max_score],60,start_screen.y,BLACK);
+                max_score = max_score % 22;                  //max score cannot be any larger than 10
+                if(max_score == 0)
+                    LCD_write_character(char_lib_ascii[1],70,start_screen.y,BLACK);
+                rem = max_score%10;
+                qut = max_score/10;
+                LCD_write_character(char_lib_num[rem],60,start_screen.y,BLACK);
+                if(qut != 0)
+                LCD_write_character(char_lib_num[qut],70,start_screen.y,BLACK);
                 timer_delay = 10;
             }
             if((bit_joy_y < JOY_LOW_THRESHOLD)){
                 if(max_score == 0){
-                    max_score = 9;
+                    max_score = 21;
                 }
                 else{
                     max_score--;
                 }
-                LCD_write_character(char_lib_num[max_score],60,start_screen.y,BLACK);
+                if(max_score == 9)
+                    LCD_write_character(char_lib_ascii[1],70,start_screen.y,BLACK);
+                rem = max_score%10;
+                qut = max_score/10;
+                LCD_write_character(char_lib_num[rem],60,start_screen.y,BLACK);
+                if(qut != 0)
+                LCD_write_character(char_lib_num[qut],70,start_screen.y,BLACK);
                 timer_delay = 10;
             }
 
