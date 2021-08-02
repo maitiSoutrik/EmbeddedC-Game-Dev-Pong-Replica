@@ -22,9 +22,29 @@ Furthermore learning video game development by writing replicas of old legacy ga
 
 ---
 
+#### Console Menu System
+
+This particular handheld video game console has 4 different menu screens and the main game window.
+
+1. Start window
+![](images/start_screen.jpg)
+
+2. Choose game
+![](images/choose_game.jpg)
+
+3. Max score
+![](images/max_score.jpg)
+
+4. Select Color
+![](images/select_color_paddle.jpg)
+
+___
 
 #### Gameplay
 ![alt-text](https://github.com/maitiSoutrik/EmbeddedC-Game-Dev-Pong-Replica/blob/master/images/gameplay.gif)
+
+___
+
 #### Future Work
 * Implement multithreading using RTOS
 * Improve AI logic and make the game faster
