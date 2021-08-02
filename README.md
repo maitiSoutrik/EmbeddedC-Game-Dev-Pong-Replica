@@ -13,7 +13,7 @@ Furthermore learning video game development by writing replicas of old legacy ga
 ---
 
 #### Gameplay
-![alt-text](https://github.com/maitiSoutrik/EmbeddedC-Game-Dev-Pong-Replica/images/gamplay.gif)
+![alt-text](https://github.com/maitiSoutrik/EmbeddedC-Game-Dev-Pong-Replica/blob/master/images/gameplay.gif)
 #### Future Work
 * Implement multithreading using RTOS
 * Improve AI logic and make the game faster
