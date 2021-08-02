@@ -45,6 +45,17 @@ ___
 
 ___
 
+#### Project Structure
+
+This project consists of 5 different .c files which are as follows :
+* adc.h & adc.c are used to configure the left joystick to capture the analog data in the x & y direction
+* game.h & game.c contains the main game logic
+* main.c is used to call the initialization of ADC, clocks, SPI, LCD & buttons. Furthermore an infinite while loop is used to call the functions in game.c which renders the single player game.
+
+*This is a single player Pong replica in which the second player is controlled by the Microcontroller*
+
+___
+
 #### Future Work
 * Implement multithreading using RTOS
 * Improve AI logic and make the game faster
